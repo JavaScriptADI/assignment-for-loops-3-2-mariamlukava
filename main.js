@@ -35,11 +35,56 @@ for (let i = 1; i <= 5; i++) {   //loop iterates from 1 through 5
 //continue statement skips the current iteration
 
 for(i = 1; i<= 10; i++){
-    if(i % 3 ===0){
+    if(i % 3 ===0){ // if i is divisable by 3, the iteration is skipped
         continue;
     }
     console.log(i);
 }
 
 //task 7
+
+let min = 1;
+let max = 100;
+
+for(let i = 0; i<100; i++){
+    let randomNumber = Math.floor(Math.random() * (max-min)) + min;
+    console.log(randomNumber);
+    if(randomNumber===27){
+        break;
+    }
+}
+
+// task 8
+
+let length = 6;
+let asciiStart = 33;
+let asciiEnd = 126; 
+let asciiRange = asciiEnd - asciiStart + 1;
+let password = "";
+
+for(let i = 0; i< length; i++) {
+let randomCode = Math.floor(Math.random() * (asciiRange) + asciiStart);
+password+=String.fromCharCode(randomCode);
+}
+console.log(password)
+
+//task 9
+
+let str = "";
+for (let i = 0; i < 10; i++) {
+    str += Math.random() > 0.5 ? " " : "?";
+}
+console.log(str);
+
+let positionsArray = [];
+
+for(let i=0; i<str.length; i++){
+    if(str[i]==="?"){
+        positionsArray.push(i);
+    }
+}
+console.log("position of "?" is", positionsArray);
+
+
+//task 10
 

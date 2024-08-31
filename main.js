@@ -83,8 +83,25 @@ for(let i=0; i<str.length; i++){
         positionsArray.push(i);
     }
 }
-console.log("position of "?" is", positionsArray);
+console.log('position of "?" is', positionsArray);
 
 
 //task 10
 
+let height = 10;
+let width = 10;
+
+let box = "";
+
+for(r=0; r<height; r++){
+    for(c=0; c<width; c++){
+        if(r===0 || r===height-1 ||c===0 || c===width-1){
+            box+="#";
+        }
+        else{
+            box+=" ";
+        }
+    }
+    box+=`\n`
+}
+console.log(box)
